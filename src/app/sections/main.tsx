@@ -63,7 +63,9 @@ const MainPage = () => {
           ? "Loading..."
           : error
           ? error
-          : videos.map((video) => <VideoCard props={video} />)}
+          : videos.map((video, index) => (
+              <VideoCard key={`${index}-video-card`} props={video} />
+            ))}
       </div>
     </>
   );
